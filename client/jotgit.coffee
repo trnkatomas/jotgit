@@ -92,7 +92,8 @@ Template.fileEdit.events(
 # note: this isn't called when switching between files
 Template.fileEdit.rendered = ->
   Jotgit.cm = CodeMirror.fromTextArea(editor,
-    lineNumbers: true
+    lineNumbers: true,
+    lineWrapping: true
   )
   Jotgit.cmAdapter = new ot.CodeMirrorAdapter(Jotgit.cm)
 
